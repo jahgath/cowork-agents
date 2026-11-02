@@ -1,0 +1,14 @@
+0.90  fit 90%  [internship] AI Engineer Intern, Agent Platform (Summer 2027) — Northbay Agents (sample)
+      gaps: MLOps & deployment, AI security & safety, Evaluation & observability
+0.82  fit 85%  [internship] Machine Learning Engineer Intern, Retrieval & Search — Cardinal Data Labs (sample)
+      gaps: MLOps & deployment, System design, Retrieval-augmented generation
+0.80  fit 95%  [research] Research Assistant, LLM Agent Evaluation — University research lab (sample)
+      gaps: Evaluation & observability, Retrieval-augmented generation
+0.62  fit 79%  [internship] Software Engineer Intern, Developer Infrastructure for Coding Agents — Forge & Merge (sample)
+      gaps: Distributed systems, System design, MLOps & deployment
+0.39  fit 67%  [entrepreneurial] Y Combinator — apply with an agentic dev-tools idea — Entrepreneurship
+      gaps: Entrepreneurship
+      https://www.ycombinator.com/apply
+0.23  fit 33%  [entrepreneurial] NSF I-Corps — customer discovery training — Entrepreneurship
+      gaps: Entrepreneurship
+      https://new.nsf.gov/funding/initiatives/i-corps

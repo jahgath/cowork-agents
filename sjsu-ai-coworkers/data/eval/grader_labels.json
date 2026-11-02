@@ -1,0 +1,23 @@
+{
+  "note": "Answers with human-assigned scores (0-1) written to span weak, partial and strong quality, used to measure how well the automatic grader agrees with a human interviewer. Scored by the project author before running the grader.",
+  "items": [
+    {"qid": "agents-1", "human": 0.9, "answer": "A workflow runs LLM calls through code paths I define in advance, so it is predictable and cheap to debug. An agent lets the model decide its next action and which tools to call, looping until done. I'd pick an agent only when the task is open-ended and the number of steps can't be predicted."},
+    {"qid": "agents-1", "human": 0.4, "answer": "An agent is more autonomous than a workflow and can use tools. Workflows are more structured."},
+    {"qid": "agents-1", "human": 0.1, "answer": "They are basically the same thing, an agent is just a newer name for a workflow in LangChain."},
+    {"qid": "llm-1", "human": 0.85, "answer": "A token is a subword piece produced by the tokenizer. The context window is the maximum number of tokens per request, so long documents must be truncated, summarized or retrieved selectively, and more tokens increase cost and latency."},
+    {"qid": "llm-1", "human": 0.3, "answer": "A token is a word. The model can only read a limited amount of text."},
+    {"qid": "rag-1", "human": 0.95, "answer": "Split documents into chunks, embed each chunk, and store the vectors in an index. At query time embed the question, retrieve the top-k nearest chunks, put them into the prompt as context and have the model generate a grounded answer with citations."},
+    {"qid": "rag-1", "human": 0.5, "answer": "You store your documents in a vector database and then the LLM searches it to find the answer to the question the user asks."},
+    {"qid": "rag-2", "human": 0.8, "answer": "First build a labeled test set with the chunks that should come back, and measure retrieval recall separately. If recall is low, fix retrieval with hybrid BM25 plus embeddings or reranking. If the right chunk is retrieved but the answer is wrong, it is generation, so check faithfulness and require citations."},
+    {"qid": "rag-2", "human": 0.2, "answer": "I would switch to a bigger model and improve the prompt."},
+    {"qid": "eval-1", "human": 0.6, "answer": "I would create a test set of example tasks and measure accuracy, and use an LLM as a judge with a rubric for open-ended outputs."},
+    {"qid": "eval-1", "human": 0.95, "answer": "Before shipping, a golden dataset of realistic tasks scored by task success, code checks and an LLM judge calibrated against human labels, run in CI as a regression gate. After launch, trace every run, score sampled production traffic online, A/B test changes and add failures back into the test set."},
+    {"qid": "ds-1", "human": 0.75, "answer": "During a network partition a distributed system has to choose between consistency and availability. A bank ledger would refuse writes to stay consistent, while a shopping cart like Dynamo stays available and reconciles later."},
+    {"qid": "ds-1", "human": 0.2, "answer": "CAP means consistency, availability and partition tolerance."},
+    {"qid": "sec-1", "human": 0.85, "answer": "Prompt injection is when untrusted content such as an email contains instructions that try to override the agent. Treat tool outputs as data, give the agent least-privilege tools, require human confirmation before sending or deleting, and run risky steps in a sandbox."},
+    {"qid": "sec-1", "human": 0.25, "answer": "It's when someone hacks the prompt. You should filter bad words."},
+    {"qid": "beh-1", "human": 0.8, "answer": "Last semester our team needed a recommendation feature in two weeks and I had never used embeddings. My task was the retrieval backend. I read the docs, built a small prototype first, then implemented the full service. We shipped on time and recommendation clicks improved 18% in user testing."},
+    {"qid": "beh-1", "human": 0.3, "answer": "I learn new technologies fast because I'm a quick learner and I like challenges."},
+    {"qid": "mlops-1", "human": 0.45, "answer": "Put it in Docker, deploy to the cloud, and add logging and latency metrics."}
+  ]
+}

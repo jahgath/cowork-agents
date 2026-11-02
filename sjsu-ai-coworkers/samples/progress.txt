@@ -1,0 +1,14 @@
+Coaching sessions:
+  2026-11-01  week1  readiness 76%  assessment 75%  AI Engineer Intern, Agent Platform (Summer 2027)
+  2026-11-08  week2  readiness 94%  assessment 97%  AI Engineer Intern, Agent Platform (Summer 2027)
+
+Topic mastery (from assessments) and reading exposure:
+  Agentic AI & orchestration           mastery 90%   reading exposure 0.5
+  Behavioral & communication           mastery 90%   reading exposure 0.0
+  LLM fundamentals                     mastery 84%   reading exposure 0.0
+  Evaluation & observability           mastery 72%   reading exposure 1.2
+  Retrieval-augmented generation       mastery 70%   reading exposure 0.2
+  AI security & safety                 mastery 63%   reading exposure 0.0
+  MLOps & deployment                   mastery 57%   reading exposure 0.0
+
+Articles recommended: 6 · read: 2 · rated: 3 · avg rating 4.3/5

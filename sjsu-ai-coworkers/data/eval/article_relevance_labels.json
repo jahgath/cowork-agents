@@ -1,0 +1,12 @@
+{
+  "note": "Graded relevance (0 = skip, 1 = useful, 2 = must-read) for the sample profile in config/profile.yaml, judged by the project author before running the ranker. Used for nDCG@3. Replace with your own judgments for your profile.",
+  "labels": {
+    "https://www.anthropic.com/engineering/redesigning-source-control": 2,
+    "https://aws.amazon.com/blogs/machine-learning/build-reliable-ai-agents-with-amazon-bedrock-agentcore-evaluations": 2,
+    "https://www.anthropic.com/engineering/building-effective-agents": 2,
+    "https://www.langchain.com/blog/langchain-langgraph-1dot0": 1,
+    "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/": 1,
+    "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/": 0,
+    "https://www.anthropic.com/news/contextual-retrieval": 1
+  }
+}

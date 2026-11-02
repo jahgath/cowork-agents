@@ -1,0 +1,69 @@
+{
+  "captured_on": "2026-11-01",
+  "method": "Real articles located via web search on 2026-11-01 because the build sandbox cannot reach publisher feeds. Summaries are paraphrased from the articles and coverage of them. In live mode the agent fetches the feeds in coworkers/tech_upgrade/sources.py instead.",
+  "articles": [
+    {
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "source": "Anthropic Engineering",
+      "org": "Anthropic",
+      "published": "2026-10-13",
+      "authority": 0.95,
+      "summary": "Anthropic's source-control team explains why it replaced git in its monorepo with Scion, an in-house version control system built by seven engineers and rolled out in five months. Merged code changes per day grew from about 2,500 in May 2026 to more than 30,000 in September as agents wrote more of the code, moving the bottleneck to developer infrastructure sized for humans: source control, builds and CI. The main branch history is close to 100 GB and a compressed working copy is over 25 GB, so giving every job a full clone became expensive. Scion is centralized and assumes clients are always online, using sparse, virtualized checkouts and an API that lets CI jobs query repository history without keeping a local repository. Repository data is distributed across independently scalable components, so capacity grows horizontally instead of by maintaining hundreds of git mirrors. Anthropic reports an infrastructure footprint about 200x smaller in CPU and memory than its git-mirroring setup, checkouts in seconds instead of minutes, and a 25% CI CPU capacity win. The team says Scion is not a general replacement for git and will not be released publicly, but expects other companies to hit the same limits within 6 to 12 months and wants to work with git hosts to bring some of the ideas into git."
+    },
+    {
+      "title": "The bridge to agent-scale Git infrastructure",
+      "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+      "source": "GitHub Engineering Blog",
+      "org": "GitHub",
+      "published": "2026-10-21",
+      "authority": 0.85,
+      "summary": "GitHub engineers Eleanor White and Victoria Dye describe the move of GitHub's repositories to Azure as a bridge toward Git infrastructure that can absorb agent-scale development. The post is a follow-up to GitHub's plan to rebuild its Git storage layer for concurrent developers and agents."
+    },
+    {
+      "title": "Building Git infrastructure for agent-scale development",
+      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+      "source": "GitHub Engineering Blog",
+      "org": "GitHub",
+      "published": null,
+      "authority": 0.85,
+      "summary": "GitHub explains why it is rebuilding its Git infrastructure, without a maintenance window, for repositories where developers and fleets of agents commit concurrently. In September 2026 developers and agents made 7.38 billion commits on GitHub, more than five times a year earlier, and pushes grew 4.9x year over year to 3.35 billion per month. Each repository is stored by a system called Spokes as full copies on several fileservers, five by default, and a quorum-based three-phase commit keeps CI, the web UI and API clients consistent. Because every replica participates in every write, a push is only as fast as the slowest replica, so adding replicas to absorb read load makes writes slower. The new design separates durable storage from the layer that answers Git requests, scales reads without adding durable copies, coordinates only the operations that need agreement, and moves compaction and garbage collection onto separate workers while keeping branch protections and required reviews intact."
+    },
+    {
+      "title": "Build reliable AI agents with Amazon Bedrock AgentCore Evaluations",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-reliable-ai-agents-with-amazon-bedrock-agentcore-evaluations",
+      "source": "AWS Machine Learning Blog",
+      "org": "AWS",
+      "published": "2026-03-31",
+      "authority": 0.85,
+      "summary": "AWS argues that agent evaluation needs a different approach from classic model evaluation and introduces AgentCore Evaluations, which moved from a re:Invent 2025 preview to general availability. The managed service runs the evaluation models, inference, data pipelines and scaling so teams can focus on agent quality rather than evaluation plumbing. It separates on-demand evaluation, used during development and CI/CD for turn-by-turn debugging, component validation, benchmarking and comparison against ground truth, from online evaluation, which samples and scores live production traffic continuously. Evaluators can be LLM-as-a-judge, ground-truth based, or custom code. The post frames evaluation as a lifecycle that runs from proof of concept through shadow testing and A/B testing to continuous monitoring."
+    },
+    {
+      "title": "LangChain and LangGraph Agent Frameworks Reach v1.0 Milestones",
+      "url": "https://www.langchain.com/blog/langchain-langgraph-1dot0",
+      "source": "LangChain Blog",
+      "org": "LangChain",
+      "published": "2025-10-22",
+      "authority": 0.8,
+      "summary": "LangChain announced simultaneous 1.0 general-availability releases of LangChain and LangGraph with a commitment to avoid breaking changes until 2.0. The recommended way to build an agent became create_agent, which runs on the LangGraph runtime and exposes middleware hooks around model and tool calls. LangGraph is positioned as the low-level orchestration runtime providing durable execution, persistence, streaming and human-in-the-loop interrupts. Legacy chains and the old AgentExecutor moved to a separate langchain-classic package."
+    },
+    {
+      "title": "Building effective agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "source": "Anthropic Engineering",
+      "org": "Anthropic",
+      "published": "2024-12-19",
+      "authority": 0.95,
+      "summary": "Anthropic distinguishes workflows, where LLMs and tools follow predefined code paths, from agents, where the LLM dynamically directs its own process and tool use. It recommends starting with the simplest solution and adding agentic complexity only when it measurably helps. The post catalogs composable patterns: prompt chaining, routing, parallelization, orchestrator-workers and evaluator-optimizer loops. Agents fit open-ended problems where the number of steps cannot be predicted, but they trade higher cost and compounding errors for flexibility, so they need sandboxed testing and guardrails. It stresses careful tool design, the agent-computer interface, as much as prompt design."
+    },
+    {
+      "title": "Introducing Contextual Retrieval",
+      "url": "https://www.anthropic.com/news/contextual-retrieval",
+      "source": "Anthropic News",
+      "org": "Anthropic",
+      "published": "2024-09-19",
+      "authority": 0.9,
+      "summary": "Anthropic describes Contextual Retrieval, a RAG technique that prepends a short chunk-specific context, generated by an LLM from the full document, to each chunk before embedding and BM25 indexing. Combining contextual embeddings with contextual BM25 reduced failed retrievals by 49 percent in their experiments, and adding a reranking step raised the reduction to 67 percent. The post explains how prompt caching keeps the one-time cost of generating chunk context low, and notes that for small knowledge bases simply placing the whole corpus in the prompt can be simpler."
+    }
+  ]
+}

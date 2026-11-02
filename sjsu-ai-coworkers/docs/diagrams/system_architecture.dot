@@ -1,0 +1,24 @@
+digraph G { 
+  graph [fontname="Helvetica", fontsize=13, bgcolor="#ffffff", pad=0.35, nodesep=0.35, ranksep=0.45, labelloc=t, fontcolor="#1d2733"];
+  node  [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", fillcolor="#eef3f8", color="#0b4f8a", fontcolor="#1d2733", penwidth=1.2];
+  edge  [fontname="Helvetica", fontsize=9, color="#6b7785", fontcolor="#6b7785", arrowsize=0.7];
+
+  label="SJSU Agentic AI Coworkers — system architecture\n "; rankdir=LR;
+  user [label="Student\n(CLI · Streamlit)", shape=ellipse, fillcolor="#fff6dd", color="#d9a21b"];
+  subgraph cluster_a1 { label="Agent 1 · DailyTechUpgradeAgent (LangGraph)"; color="#0b4f8a"; style=rounded;
+    a1 [label="discover → filter → score\n→ select top 3 → summarize\n→ daily brief"]; }
+  subgraph cluster_a2 { label="Agent 2 · nextLevelPersonalCoachForCareerLevel (LangGraph)"; color="#0b4f8a"; style=rounded;
+    a2 [label="opportunities → fit & gaps\n→ plan → ask ⇄ evaluate\n→ adapt → readiness report"]; }
+  mem [label="Long-term memory (SQLite)\nrecommendations · ratings\ntopic mastery · assessments · sessions", shape=cylinder, fillcolor="#e8f4ec", color="#2f7d4f"];
+  prof [label="Profile (YAML)\ngoals · interests · skills", shape=note, fillcolor="#f6f6f6", color="#6b7785"];
+  llm [label="LLM layer\nClaude · OpenAI · offline heuristics", shape=component, fillcolor="#f3eefb", color="#6a4fa3"];
+  feeds [label="Authoritative feeds\nOpenAI · Anthropic · Google · Microsoft\nAWS · IBM · LangChain · GitHub\nIEEE · ACM · Hugging Face · NVIDIA · arXiv", shape=folder, fillcolor="#f6f6f6", color="#6b7785"];
+  jobs [label="Opportunity sources\nGreenhouse · Lever APIs\narXiv research leads\nstartup programs", shape=folder, fillcolor="#f6f6f6", color="#6b7785"];
+  sandbox [label="Code runner\n(subprocess + timeout)", shape=component, fillcolor="#f3eefb", color="#6a4fa3"];
+  user -> a1 [label="brief · rate · read"]; user -> a2 [label="answers"];
+  a1 -> user [label="Top-3 brief"]; a2 -> user [label="questions · feedback\nreadiness report"];
+  feeds -> a1; jobs -> a2; prof -> a1; prof -> a2;
+  a1 -> llm [dir=both]; a2 -> llm [dir=both]; a2 -> sandbox [dir=both, label="coding tests"];
+  a1 -> mem [dir=both, label="exposure · ratings"]; a2 -> mem [dir=both, label="mastery · sessions"];
+  mem -> a1 [label="gaps steer\nrecommendations", color="#d9a21b", fontcolor="#d9a21b", penwidth=1.8, constraint=false];
+}

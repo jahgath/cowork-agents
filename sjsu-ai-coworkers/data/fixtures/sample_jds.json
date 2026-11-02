@@ -1,0 +1,41 @@
+{
+  "note": "SYNTHETIC sample postings written for offline demos and tests. Company names are fictional. In live mode (--live) the coach pulls real postings from the Greenhouse/Lever boards listed in config/profile.yaml.",
+  "opportunities": [
+    {
+      "title": "AI Engineer Intern, Agent Platform (Summer 2027)",
+      "company": "Northbay Agents (sample)",
+      "location": "San Jose, CA (hybrid)",
+      "url": null,
+      "type": "internship",
+      "source": "sample",
+      "description": "You will build and evaluate LLM agents that call internal tools and APIs. Responsibilities: implement agent workflows with LangGraph or similar orchestration frameworks; design tool schemas and guardrails; build evaluation pipelines (golden datasets, LLM-as-a-judge, regression tests in CI) and trace-based observability; improve retrieval (RAG, embeddings, reranking) for agent memory; ship features to production behind feature flags. Requirements: strong Python; data structures and algorithms; understanding of transformer LLMs, tokens, context windows and prompting; familiarity with distributed systems basics. Nice to have: experience with sandboxing and prompt injection defenses, Docker/Kubernetes, SQL."
+    },
+    {
+      "title": "Machine Learning Engineer Intern, Retrieval & Search",
+      "company": "Cardinal Data Labs (sample)",
+      "location": "Sunnyvale, CA",
+      "url": null,
+      "type": "internship",
+      "source": "sample",
+      "description": "Join the search team improving retrieval-augmented generation for enterprise documents. You will experiment with chunking strategies, embedding models, hybrid BM25 + vector retrieval and rerankers; build offline evaluation (recall@k, faithfulness) and dashboards; write production Python services and SQL pipelines; deploy models with Docker on Kubernetes and monitor latency and cost. Requirements: Python, SQL, algorithms, statistics, LLM fundamentals. Nice to have: vector databases, distributed systems, caching."
+    },
+    {
+      "title": "Software Engineer Intern, Developer Infrastructure for Coding Agents",
+      "company": "Forge & Merge (sample)",
+      "location": "Remote (US)",
+      "url": null,
+      "type": "internship",
+      "source": "sample",
+      "description": "Coding agents now open thousands of pull requests a day on our platform. Help us scale source control and CI for agent workloads: monorepo tooling, git internals, merge queues, sparse checkout and caching, horizontally scalable storage, replication and consistency trade-offs. Requirements: systems programming in Python or Go, data structures, distributed systems fundamentals (replication, quorum, consistency), Linux. Nice to have: experience running agents, CI/CD pipelines, observability."
+    },
+    {
+      "title": "Research Assistant, LLM Agent Evaluation",
+      "company": "University research lab (sample)",
+      "location": "San Jose, CA",
+      "url": null,
+      "type": "research",
+      "source": "sample",
+      "description": "Part-time research assistant to build benchmarks for tool-using LLM agents: design tasks and ground truth, implement automatic evaluators and LLM-as-a-judge with human agreement studies, analyze trajectories and failure modes, and co-author a workshop paper. Requirements: Python, experiment design, statistics, LLM fundamentals, clear technical writing. Nice to have: prior research, agents, retrieval."
+    }
+  ]
+}

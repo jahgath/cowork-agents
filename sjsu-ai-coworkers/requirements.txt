@@ -1,0 +1,11 @@
+# core (pinned to versions tested for this submission)
+langgraph==1.2.19
+feedparser>=6.0
+requests>=2.31
+pyyaml>=6.0
+# optional: LLM providers (the agents run offline without them)
+anthropic>=0.40
+openai>=1.40
+# optional: demo UI and tests
+streamlit>=1.35
+pytest>=8.0

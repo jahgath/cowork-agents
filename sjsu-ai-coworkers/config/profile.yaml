@@ -1,0 +1,65 @@
+# Edit this file to make both coworkers yours.
+name: "SJSU Student"
+program: "MS Software Engineering, San José State University"
+graduation: "May 2027"
+career_goal: "AI/ML engineer building agentic systems"
+long_term_goal: "Found an AI developer-tools startup"
+target_roles:
+  - "AI Engineer Intern"
+  - "Machine Learning Engineer Intern"
+  - "Software Engineer Intern, AI Platform"
+  - "Applied Scientist Intern"
+  - "Research Assistant, LLM evaluation"
+
+# How much you care about each topic (0 = not at all, 1 = a lot).
+# Ratings you give recommended articles adjust these automatically over time.
+interests:
+  agents: 1.0
+  llm: 0.9
+  evaluation: 0.8
+  rag: 0.8
+  system-design: 0.7
+  dev-tools: 0.6
+  mlops: 0.6
+  distributed-systems: 0.5
+  security: 0.5
+  startups: 0.5
+  python: 0.4
+  data-structures: 0.4
+  sql: 0.3
+
+# Honest self-rating, 0-5. Assessment results from the career coach override these.
+skills:
+  python: 4
+  data-structures: 3
+  sql: 3
+  dev-tools: 3
+  behavioral: 3
+  llm: 3
+  agents: 2
+  rag: 2
+  system-design: 2
+  distributed-systems: 2
+  evaluation: 1
+  mlops: 1
+  security: 1
+
+daily_reading_minutes: 18      # target: 15-20 minute session
+words_per_minute: 230
+
+# Agent 2 live job sources (public ATS APIs). Board tokens are examples: verify
+# each company's careers page and edit. Leave empty to use only the sample set.
+job_boards:
+  greenhouse: ["anthropic", "databricks", "scaleai"]
+  lever: []
+job_locations: ["San Jose", "San Francisco", "Bay Area", "Remote", "Mountain View", "Sunnyvale", "Santa Clara"]
+
+# Entrepreneurial and research tracks (edit with programs you are applying to).
+entrepreneurship:
+  - title: "Y Combinator — apply with an agentic dev-tools idea"
+    url: "https://www.ycombinator.com/apply"
+    notes: "Batches open several times a year; needs a working prototype and early users."
+  - title: "NSF I-Corps — customer discovery training"
+    url: "https://new.nsf.gov/funding/initiatives/i-corps"
+    notes: "Team-based customer-discovery program; often accessed through a university I-Corps site."
+research_interests: ["LLM agents evaluation", "retrieval augmented generation", "agent tool use"]

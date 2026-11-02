@@ -1,0 +1,53 @@
+{
+  "agent1": {
+    "picked": [
+      "Redesigning source control at Anthropic",
+      "Build reliable AI agents with Amazon Bedrock AgentCore Evaluations",
+      "LangChain and LangGraph Agent Frameworks Reach v1.0 Milestones"
+    ],
+    "ndcg@3": 0.844,
+    "ndcg@3_recency_baseline": 0.531,
+    "ndcg@3_random_baseline": 0.583,
+    "authority_rate": 1.0,
+    "distinct_orgs": 3,
+    "distinct_topics": 3,
+    "median_age_days": 215,
+    "session_minutes": 18,
+    "insight_grounding_rate": 1.0,
+    "rated_topic_rank_before": 3,
+    "rated_topic_rank_after": 1,
+    "summarizer": "offline (heuristic mode)"
+  },
+  "agent2": {
+    "grader": "unit tests (coding) + rubric coverage (offline)",
+    "n_labeled": 18,
+    "grader_mae": 0.16,
+    "grader_within_0.25": 0.889,
+    "grader_spearman": 0.843,
+    "worst_disagreements": [
+      {
+        "qid": "agents-1",
+        "human": 0.4,
+        "auto": 0.0
+      },
+      {
+        "qid": "beh-1",
+        "human": 0.3,
+        "auto": 0.0
+      },
+      {
+        "qid": "ds-1",
+        "human": 0.75,
+        "auto": 1.0
+      }
+    ],
+    "reference_solutions_pass": true,
+    "mutants_detected": "4/4",
+    "question_relevance": 1.0,
+    "follow_ups_asked": 3,
+    "distinct_topic_difficulty_pairs_s1": 6,
+    "readiness_s1": 0.758,
+    "readiness_s2": 0.944,
+    "target": "AI Engineer Intern, Agent Platform (Summer 2027)"
+  }
+}

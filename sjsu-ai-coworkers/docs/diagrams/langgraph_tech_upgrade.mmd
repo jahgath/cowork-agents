@@ -1,0 +1,31 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_context(load_context)
+	discover(discover)
+	filter_candidates(filter_candidates)
+	widen_window(widen_window)
+	score_rank(score_rank)
+	select_top3(select_top3)
+	summarize(summarize)
+	compose_brief(compose_brief)
+	persist(persist)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_context;
+	compose_brief --> persist;
+	discover --> filter_candidates;
+	filter_candidates -.-> score_rank;
+	filter_candidates -.-> widen_window;
+	load_context --> discover;
+	score_rank --> select_top3;
+	select_top3 --> summarize;
+	summarize --> compose_brief;
+	widen_window --> filter_candidates;
+	persist --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

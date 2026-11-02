@@ -1,0 +1,23 @@
+digraph G { 
+  graph [fontname="Helvetica", fontsize=13, bgcolor="#ffffff", pad=0.35, nodesep=0.35, ranksep=0.45, labelloc=t, fontcolor="#1d2733"];
+  node  [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", fillcolor="#eef3f8", color="#0b4f8a", fontcolor="#1d2733", penwidth=1.2];
+  edge  [fontname="Helvetica", fontsize=9, color="#6b7785", fontcolor="#6b7785", arrowsize=0.7];
+
+  label="Agent 1 · DailyTechUpgradeAgent — workflow, tools, memory\n "; rankdir=TB;
+  start [label="schedule / CLI", shape=ellipse, fillcolor="#fff6dd", color="#d9a21b"];
+  load [label="load_context\ninterests + learned deltas, mastery,\nexposure, already-seen URLs"];
+  disc [label="discover\nRSS · HTML index · arXiv API\n(parallel, failures isolated)"];
+  filt [label="filter_candidates\ndedupe · drop seen · recency window"];
+  widen [label="widen_window\n7 → 30 → 120 → 1095 days", fillcolor="#fff6dd", color="#d9a21b"];
+  score [label="score_rank\n0.30 relevance×depth + 0.20 authority\n+ 0.20 recency + 0.20 learning gap + 0.10 novelty"];
+  sel [label="select_top3\ngreedy with source/topic diversity penalties"];
+  summ [label="summarize\nLLM JSON card (full text) or offline extractive\nsummary · 3 insights · takeaways · career link · check question"];
+  brief [label="compose_brief\n15–20 min reading plan (Markdown)"];
+  persist [label="persist\nsave brief · record recommendations"];
+  mem [label="memory (SQLite)", shape=cylinder, fillcolor="#e8f4ec", color="#2f7d4f"];
+  fb [label="student feedback\nrate 1–5 · mark read", shape=ellipse, fillcolor="#fff6dd", color="#d9a21b"];
+  start -> load -> disc -> filt;
+  filt -> widen [label="< 6 candidates"]; widen -> filt;
+  filt -> score [label="enough"]; score -> sel -> summ -> brief -> persist;
+  mem -> load [style=dashed]; persist -> mem [style=dashed]; fb -> mem [style=dashed, label="interest deltas · exposure"];
+}
